@@ -5,22 +5,35 @@ import './App.css'
 
 function App() {
 
- const [counter,SetCounter] = useState(5)
+ let [counter,SetCounter] = useState(5)
   
   // let counter=5
 
 
 
   function addValue(){
-    console.log('value added',counter)
+ 
     // counter++
+    if(counter===20){
+      counter=20
+      alert('Counter limit Excessed')
+      SetCounter(counter)
+    }else{
     SetCounter(counter+1)
-  }
+  }}
 
   function removeValue(){
-    console.log('value removed',counter)
+ 
     // counter--
-    SetCounter(counter-1)
+
+    if(counter===0){
+      counter=0
+      SetCounter(counter)
+      alert('Counter Can not be set below')
+}else{
+  SetCounter(counter-1)
+}
+
   }
 
 
