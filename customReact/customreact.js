@@ -3,12 +3,6 @@ const mainContainer=document.querySelector('#root');
 
 
 function customRender(reactElement,container){
-    // const domElement=document.createElement(reactElement.type)
-    // domElement.innerHTML=reactElement.childern;
-    // domElement.setAttribute('href',reactElement.props.href)
-    // domElement.setAttribute('target',reactElement.props.target)
-    // mainContainer.appendChild(domElement)
-
 
     const domElement=document.createElement(reactElement.type)
     domElement.innerHTML=reactElement.childern
